@@ -32,10 +32,10 @@ export default defineConfig({
                 text: '如何找到问题的答案',
                 link: '/24spring/before_ask/how_to_find_answers'
               },
-              {
-                text: '写大作业时遇到了问题',
-                link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
-              }
+              // {
+              //   text: '写大作业时遇到了问题',
+              //   link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
+              // }
             ]
           },
           { text: '环境配置', link: '/24spring/env_setup' },
