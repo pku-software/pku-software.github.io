@@ -13,6 +13,7 @@ hero:
     - theme: alt
       text: 大作业文档
       # link: https://pku-software.github.io/project-doc
+features_title: 在本课程中，你将会学习到：
 features:
 - icon: 📗
   title: C++面向对象程序设计
