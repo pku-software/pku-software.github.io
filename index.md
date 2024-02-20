@@ -12,7 +12,7 @@ hero:
       link: /24spring/
     - theme: alt
       text: 大作业文档
-      link: https://pku-software.github.io/project-doc
+      # link: https://pku-software.github.io/project-doc
 features:
 - icon: 📗
   title: C++面向对象程序设计

@@ -8,8 +8,15 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '主页', link: '/' },
-      { text: '大作业文档', link: 'https://pku-software.github.io/project-doc/' }
+      {
+        text: '主页',
+        link: '/'
+      },
+      {
+        text: '大作业文档',
+        // link: 'https://pku-software.github.io/project-doc/'
+        link: ''
+      }
     ],
 
     sidebar: [
@@ -31,11 +38,15 @@ export default defineConfig({
               }
             ]
           },
-          { text: '环境配置', link: '/24spring/env_setup'},
-          { text: 'FAQ', link: '/24spring/faq'}
+          { text: '环境配置', link: '/24spring/env_setup' },
+          { text: 'FAQ', link: '/24spring/faq' }
         ]
       },
-      { text: '大作业文档', link: 'https://pku-software.github.io/project-doc/' }
+      {
+        text: '大作业文档',
+        // link: 'https://pku-software.github.io/project-doc/'
+        link: ''
+      }
     ],
 
     socialLinks: [
