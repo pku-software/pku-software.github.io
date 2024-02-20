@@ -39,13 +39,35 @@ export default defineConfig({
             ]
           },
           { text: '环境配置', link: '/24spring/env_setup' },
+          { text: '中作业', link: '' },
+          {
+            text: "知识相关问题",
+            items: [
+              {
+                text: '从 C 到 C++',
+                link: '/24spring/knowledge_related/from_c_to_cpp'
+              },
+              {
+                text: '类与对象初步',
+                link: '/24spring/knowledge_related/class_and_object_intro'
+              },
+            ]
+          },
           { text: 'FAQ', link: '/24spring/faq' }
         ]
+      },
+      {
+        text: '上机作业参考答案',
+        link: 'https://pku-software.github.io/homework-answer/'
       },
       {
         text: '大作业文档',
         // link: 'https://pku-software.github.io/project-doc/'
         link: ''
+      },
+      {
+        text: '谷雨同学的 C++ 教程',
+        link: 'https://learn-cpp.guyutongxue.site/'
       }
     ],
 
