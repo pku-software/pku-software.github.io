@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 24春课程文档
-      link: /24spring/
+      link: /24spring/notices
     - theme: alt
       text: 大作业文档
       # link: https://pku-software.github.io/project-doc
