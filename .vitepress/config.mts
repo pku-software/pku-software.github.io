@@ -38,7 +38,7 @@ export default defineConfig({
               // }
             ]
           },
-          { text: '环境配置', link: '/24spring/env_setup' },
+          { text: '环境配置', link: 'https://pku-software.github.io/CppEnvSetup/' },
           { text: '中作业', link: '' },
           {
             text: "知识相关问题",
