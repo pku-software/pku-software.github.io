@@ -35,7 +35,7 @@ std::cout << result->body << std::endl;
 	- 200 OK: Successfully retrieved book information.
 	```json
 	{
-	  "authors": ["Author One", "Author Two"],
+	  "authors": "Author One, Author Two",
 	  "title": "Book Title",
 	  "publisher": "Publisher Name",
 	  "year": "Year of Publication"
