@@ -221,7 +221,7 @@ HTTP 内规定了客户端对服务器的几种操作，最重要的两种就是
 
 ```c++
 auto isbn_response = client.Get("/isbn/" + encodeUriComponent(isbn));
-auto title_response = client.Get("/title/" + + encodeUriComponent(url));
+auto title_response = client.Get("/title/" + encodeUriComponent(url));
 ```
 
 这里 `encodeUriComponent` 就是将一个字符串编码成有效的URL字段。例如，URL 中不能包括空格，如果确实需要空格，就需要转义为 `%20` 再发送。
