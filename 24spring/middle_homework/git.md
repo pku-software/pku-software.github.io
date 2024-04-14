@@ -1,4 +1,4 @@
-## Git
+# Git基础
 
 Git 是一个版本控制系统 (version control system，VCS)。什么是版本控制？为什么需要做版本控制？
 
