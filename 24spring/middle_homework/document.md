@@ -241,7 +241,7 @@ if (result && result->status == httplib::OK_200) {
 
 > 另一种常见的状态码是 `404`，即未找到相关资源。
 
-事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 JOSN 的字符串即可，详细文档参见 [Web API 文档](./api)
+事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 JOSN 的字符串即可，详细文档参见 [Web API 文档](./api)。
 
 ### <span id="git">Git</span>
 
