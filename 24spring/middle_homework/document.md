@@ -127,7 +127,7 @@ References:
 5. 可以修改 `CMakeLists.txt`，使工程符合你的需要。这个[视频](https://www.bilibili.com/video/BV1Pg4y1U7XM?t=3072.7)介绍了 `CMake` 的使用，供参考。
 6. 使用 Git 等版本控制工具管理代码。**特别注意，对于本次作业（以及之后的大作业），不要把你的代码仓库设置为public的，这相当于在考场上把你的答案给每个人看一遍，助教会进行严肃处理**。
 
-## Appendix
+## 附录
 
 ### <span id="JSON">JSON</span>
 
