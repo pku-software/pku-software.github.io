@@ -212,6 +212,7 @@ outFile << data; // 输出格式为json。
 #include <cpp-httplib/httplib.h>
 
 httplib::Client client{ "http://IP地址或者域名" }; // 与该IP地址进行连接，并使用HTTP协议。
+// 在我们的utils.hpp直接定义了API_ENDPOINT，可以直接client{ API_ENDPOINT }.
 ```
 
 > 特别地，为了减少库依赖，我们这里使用的不是 `https:`；`https:` 会对数据进行加解密，是安全的（这个 `s` 就是 safe 的意思）。除了我们提供的域名，如果一个网页使用 `http://`，那么就要十分小心了，因为所有的信息都会明文传输。如果你在校内，那么我们的域名在将信息中转到校外之前会帮你把服务转为 `https`，此时信息仅在校园网内部进行明文传输。
