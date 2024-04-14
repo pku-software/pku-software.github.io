@@ -217,7 +217,9 @@ httplib::Client client{ "http://IP地址或者域名" }; // 与该IP地址进行
 
 > 特别地，为了减少库依赖，我们这里使用的不是 `https:`；`https:` 会对数据进行加解密，是安全的（这个 `s` 就是 safe 的意思）。除了我们提供的域名，如果一个网页使用 `http://`，那么就要十分小心了，因为所有的信息都会明文传输。如果你在校内，那么我们的域名在将信息中转到校外之前会帮你把服务转为 `https`，此时信息仅在校园网内部进行明文传输。
 
-HTTP 内规定了客户端对服务器的几种操作，最重要的两种就是 `GET` 和 `POST`，它们没有特别本质的区别，但是约定俗成地，前者在 URL 中携带参数（例如百度搜索东西就是 `baidu.com/s?wd=关键字`，这里 `?` 后面就是参数），并表示一些读取操作；后者在报文内携带参数，从而不会在网址本身中保存状态。我们统一使用 `GET` 方法即可，如下：
+HTTP 内规定了客户端对服务器的几种操作，最重要的两种就是 `GET` 和 `POST`，它们没有特别本质的区别，但是约定俗成地，前者在 URL 中携带参数（例如百度搜索东西就是 `baidu.com/s?wd=关键字`，这里 `?` 后面就是参数），并表示一些读取操作；后者在报文内携带参数，从而不会在网址本身中保存状态。
+
+我们在 `http://docman.lcpu.dev` 提供了 API 查询接口，方便大家查询信息。我们统一使用 `GET` 方法即可，如下：
 
 ```c++
 auto isbn_response = client.Get("/isbn/" + encodeUriComponent(isbn));
@@ -229,17 +231,17 @@ auto title_response = client.Get("/title/" + encodeUriComponent(url));
 在 HTTP 报文中，除了服务器的实际数据，还会包括一些描述其他属性的字段。一个重要的字段就是**状态码**（status code），表示向服务器的请求状态。当状态码为 `200` 时，就说明服务器处理正确：
 
 ```c++
-if (result->status == httplib::OK_200) {
-	// 处理正确数据result->body
+if (result && result->status == httplib::OK_200) {
+    // 处理正确数据result->body
 } else {
-	auto err = res.error();
+    auto err = res.error();
     std::cerr << "HTTP error: " << httplib::to_string(err) << std::endl;
 }
 ```
 
 > 另一种常见的状态码是 `404`，即未找到相关资源。
 
-事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 json 的字符串即可。
+事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 JOSN 的字符串即可，详细文档参见 [Web API 文档](./api)
 
 ### <span id="git">Git</span>
 
