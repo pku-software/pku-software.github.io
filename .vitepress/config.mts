@@ -43,7 +43,7 @@ export default defineConfig({
             items: [
               {
                 text: '中作业文档',
-                link: ''
+                link: '/24spring/middle_homework/document'
               },
               {
                 text: 'Git基础',
