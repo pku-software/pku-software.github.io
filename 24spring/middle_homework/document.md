@@ -252,7 +252,7 @@ git config --global user.name "your_username" # 你在github上的用户名
 git config --global user.email your_email@domain.com # 你在github上注册使用的邮箱
 ```
 
-特别地，Github的国内直连不稳定，因此我们提供了git代理（只在git命令上有效，在浏览器上访问github并不会走这个代理），可以使用如下命令：
+特别地，Github 的国内直连不稳定，因此我们提供了 git 代理（只在 git 命令上有效，在浏览器上访问github并不会走这个代理），可以使用如下命令：
 
 ```bash
 git config --global http.proxy http://git.lcpu.dev:7890
@@ -266,7 +266,7 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-如果你已经可以稳定连接github，那么也可以不使用我们提供的代理。我们的代理仅限于校内用户，如果你在校外，可以使用北大VPN来访问校内资源。
+如果你已经可以稳定连接 github，那么也可以不使用我们提供的代理。我们的代理仅限于校内用户，如果你在校外，可以使用北大VPN来访问校内资源。
 
 ## 开始
 
@@ -276,17 +276,17 @@ git config --global --unset https.proxy
 
    ![](assets/git-template.png)
 
-2. 在如下界面中的"Repository name"输入仓库名（例如`docman`），**并别忘了在下方把仓库设置为private**。随后点击"Create repository"后即可创建自己的仓库。
+2. 在如下界面中的"Repository name"输入仓库名（例如`docman`），**并别忘了在下方把仓库设置为 private**。随后点击 "Create repository" 后即可创建自己的仓库。
 
    ![](assets/git-repo.png)
 
-3. 随后，你可以在命令行使用`git clone https://github.com/用户名/仓库名.git`来克隆代码仓库到本地。对于后续的操作，除了使用命令行的方式，你还可以利用 IDE 内部集成的 git 工具或者 [GitHub Desktop](https://desktop.github.com/)来 进行图形化的操作。例如在 VS Code 中：
+3. 随后，你可以在命令行使用 `git clone https://github.com/用户名/仓库名.git` 来克隆代码仓库到本地。对于后续的操作，除了使用命令行的方式，你还可以利用 IDE 内部集成的 git 工具或者 [GitHub Desktop](https://desktop.github.com/)来 进行图形化的操作。例如在 VS Code 中：
 
    ![git-vscode.png](assets/git-vscode.png)
 
    在 `message` 处输入一次提交的简介，然后点击 `commit` 就可以进行提交；随后点击 `push`，就会将代码同步到远端的仓库，在浏览器就可以直接看见。不过，大家以后总是要面临一些图形化界面操作不方便的情况，还是需要会使用命令行操作的。
 
-> 我们在将来还会有github的自动测试，大家push上去代码就会自动测试。
+> 我们稍后还会上线基于 GitHub 的自动测试，大家把代码推送上去就会自动测试。
 
 ### 如何提交
 
