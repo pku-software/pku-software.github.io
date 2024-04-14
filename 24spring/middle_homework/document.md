@@ -98,7 +98,7 @@ References:
 + `Citation` 类及其子类，用于表示文献的信息，请考虑如何尽量避免代码冗余
 + 从网络获取信息的函数（写在对应的子类中），请注意异常处理
 
-同时，我们在 `utils.hpp` 中为大家提供了一些工具函数。`readFromFile` 可以将文件内容读取到一个 `string` 中并返回，`encodeUriComponent` 的作用见[附录HTTP部分](#HTTP)。
+同时，我们在 `utils.hpp` 中为大家提供了工具函数`encodeUriComponent` ，其作用见[附录HTTP部分](#HTTP)。<del>本来还提供了`readFromFile` 将文件内容完全读取到一个 `std::string` 中并返回，但是家铭助教把这几行代码给删掉了，让大家练习下怎么读文件。</del>
 
 最终，假设编译得到的可执行程序为`docman`，我们期望你的程序通过命令行进行处理：
 
