@@ -39,7 +39,18 @@ export default defineConfig({
             ]
           },
           { text: '环境配置', link: 'https://pku-software.github.io/CppEnvSetup/' },
-          { text: '中作业', link: '' },
+          { text: '中作业', 
+            items: [
+              {
+                text: '中作业文档',
+                link: ''
+              },
+              {
+                text: 'Git基础',
+                link: '/24spring/middle_homework/git'
+              }
+            ]  
+          },
           {
             text: "知识相关问题",
             items: [
@@ -47,10 +58,10 @@ export default defineConfig({
                 text: '从 C 到 C++',
                 link: '/24spring/knowledge_related/from_c_to_cpp'
               },
-              {
-                text: '类与对象初步',
-                link: '/24spring/knowledge_related/class_and_object_intro'
-              },
+              // {
+              //   text: '类与对象初步',
+              //   link: '/24spring/knowledge_related/class_and_object_intro'
+              // },
             ]
           },
           { text: 'FAQ', link: '/24spring/faq' }
