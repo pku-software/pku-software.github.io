@@ -173,7 +173,7 @@ for(auto& item : data["Gonna"]) // 遍历数组
     std::cout << item << " ";
 ```
 
-本质上，`nlohmann::json`的返回值为`json::value`类型，并发生了隐式转型（`operator<<`无转型，因为库已经提供了重载）；不过nlohmann不太建议在获取数据时使用隐式转型，具体原因可以查看[这个 issue](https://github.com/nlohmann/json/issues/958)。所以你也可以使用下面的两种方式之一：
+本质上，`nlohmann::json::operator[]`的返回类型仍为`json`类型，并发生了隐式转型（`operator<<`无转型，因为库已经提供了重载）；不过nlohmann不太建议在获取数据时使用隐式转型，具体原因可以查看[这个 issue](https://github.com/nlohmann/json/issues/958)。所以你也可以使用下面的两种方式之一：
 
 ```c++
 auto val = data["Never"].get<int>();
@@ -198,7 +198,7 @@ std::ofstream outFile{ "out.json" };
 outFile << data; // 输出格式为json。
 ```
 
-当然，你可以用`data.is_null()`、`is_boolean()`、`is_number()`、`is_object()`、`is_array()`、`is_string()`来直接检查字段的类型，这对于检查文献合集是否合法非常重要。
+当然，你可以用如`data["Never"].is_null()`、`is_boolean()`、`is_number()`、`is_object()`、`is_array()`、`is_string()`来直接检查字段的类型，这对于检查文献合集是否合法非常重要。
 
 ### <span id="HTTP">Web API</span>
 
