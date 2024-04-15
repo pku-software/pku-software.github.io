@@ -198,7 +198,7 @@ std::ofstream outFile{ "out.json" };
 outFile << data; // 输出格式为json。
 ```
 
-当然，你可以用如`data["Never"].is_null()`、`is_boolean()`、`is_number()`、`is_object()`、`is_array()`、`is_string()`来直接检查字段的类型，这对于检查文献合集是否合法非常重要。
+当然，你可以用如`data["Never"].is_null()`、`is_boolean()`、`is_number()`、`is_object()`、`is_array()`、`is_string()`来直接检查字段的类型，`data.contains("Never")`来检查字段是否存在，这对于检查文献合集是否合法非常重要。
 
 ### <span id="HTTP">Web API</span>
 
