@@ -239,7 +239,7 @@ if (result && result->status == httplib::OK_200) {
 
 > 另一种常见的状态码是 `404`，即未找到相关资源。
 
-事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 JOSN 的字符串即可，详细文档参见 [Web API 文档](./api)。
+事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 JSON 的字符串即可，详细文档参见 [Web API 文档](./api)。
 
 ### <span id="git">Git</span>
 
@@ -280,7 +280,7 @@ git config --global --unset https.proxy
 
    ![](assets/git-repo.png)
 
-3. 随后，你可以在命令行使用 `git clone https://github.com/用户名/仓库名.git` 来克隆代码仓库到本地。对于后续的操作，除了使用命令行的方式，你还可以利用 IDE 内部集成的 git 工具或者 [GitHub Desktop](https://desktop.github.com/)来 进行图形化的操作。例如在 VS Code 中：
+3. 随后，你可以在命令行使用 `git clone https://github.com/用户名/仓库名.git` 来克隆代码仓库到本地。对于后续的操作，除了使用命令行的方式，你还可以利用 IDE 内部集成的 git 工具或者 [GitHub Desktop](https://desktop.github.com/) 来进行图形化的操作。例如在 VS Code 中：
 
    ![git-vscode.png](assets/git-vscode.png)
 
