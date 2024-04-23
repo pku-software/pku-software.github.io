@@ -53,9 +53,7 @@
       "title": "A Fast File System for UNIX",
       "author": "Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry",
       "journal": "ACM Transactions on Computer Systems",
-      "year": 1984,
-      "volume": 2,
-      "issue": 3
+      "year": "1984"
     }
   ]
 }
@@ -75,20 +73,20 @@ The book [1] is a great book. The article [3] is also a classic. View [2] for mo
 References:
 [1] book: Randal E. Bryant, David R. O'Hallaron, Computer Systems: A Programmer's Perspective, Pearson, 2019
 [2] webpage: PyTorch. Available at https://pytorch.org
-[3] article: Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry, A Fast File System for UNIX, ACM Transactions on Computer Systems, 1984, 2, 3
+[3] article: Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry, A Fast File System for UNIX, ACM Transactions on Computer Systems, 1984
 ```
 
 ### 详细要求
 
 > 你首先需要从 Github 上将代码克隆下来，我们在附录中也介绍了 [Git](#Git) 的使用方法。
 
-每个文献都具有一个数字 `id`，它在文章中使用 `[id]` 来进行引用。我们需要找到文章中所有的 `id`，并按照 `id` 顺序在文末对文献进行排列。在文献合集中，所有的文献都在 `citations` 的数组中，每个对象代表了一个文献，并具有字符串形式的 `id`。我们保证所有的 `id` 是无重复的。
+每个文献都具有一个 `id`，它在文章中使用 `[id]` 来进行引用。我们需要找到文章中所有的 `id`，并按照 `id` 顺序（以字符串顺序为准）在文末对文献进行排列。在文献合集中，所有的文献都在 `citations` 的数组中，每个对象代表了一个文献，并具有字符串形式的 `id`。我们保证所有的 `id` 是无重复的。
 
 我们要求处理的文献有三类：
 
 + 书籍，在文献合集中对象的字段 `type` 为 `"book"`，只具有`ISBN`号，需要程序从网络上查询合适的额外信息，最终的输出格式为 `[id] book: 作者, 书籍标题, 出版社, 出版年份`。
-+ 网页，在文献合集中对象的字段 `type` 为 `"webpage"`，只具有网址，同样需要程序从网络上查询，最终的输出格式为 `[id] article: 作者, 文章标题, 期刊名, 发表年份, 卷号, 期号`。
-+ 文章在文献合集中对象的字段 `type` 为 `"article"`，对象的内容包含了它的全部信息，最终的输出格式为 `[id] webpage: 网页标题. Available at 网址`。
++ 网页，在文献合集中对象的字段 `type` 为 `"webpage"`，只具有网址，同样需要程序从网络上查询，最终的输出格式为 `[id] webpage: 网页标题. Available at 网址`。
++ 文章在文献合集中对象的字段 `type` 为 `"article"`，对象的内容包含了它的全部信息，最终的输出格式为 `[id] article: 作者, 文章标题, 期刊名, 发表年份`。
 
 对于网络进行查询的接口如何使用请详见[附录](#HTTP)。我们期望你补充的内容包括：
 
@@ -124,7 +122,7 @@ References:
 2. 请注意异常处理，确保用户输入符合要求，提升程序的健壮性。
 3. 请注意代码的可读性，合理使用注释，提高代码的可维护性。
 4. 注意代码的模块化，合理划分函数，提高代码的复用性。
-5. 可以修改 `CMakeLists.txt`，使工程符合你的需要。这个[视频](https://www.bilibili.com/video/BV1Pg4y1U7XM?t=3072.7)介绍了 `CMake` 的使用，供参考。
+5. 可以修改 `CMakeLists.txt`，使工程符合你的需要，包括并不限于增加依赖库、增加其他 target 等，但要保持可执行文件名称为 `docman` 不变，不修改默认二进制输出位置（对于编译文件夹是 `build` 的情况，二进制将位于 `build/docman`。这个[视频](https://www.bilibili.com/video/BV1Pg4y1U7XM?t=3072.7)介绍了 `CMake` 的使用，供参考。
 6. 使用 Git 等版本控制工具管理代码。**特别注意，对于本次作业（以及之后的大作业），不要把你的代码仓库设置为public的，这相当于在考场上把你的答案给每个人看一遍，助教会进行严肃处理**。
 
 ## 附录
@@ -173,7 +171,7 @@ for(auto& item : data["Gonna"]) // 遍历数组
     std::cout << item << " ";
 ```
 
-本质上，`nlohmann::json`的返回值为`json::value`类型，并发生了隐式转型（`operator<<`无转型，因为库已经提供了重载）；不过nlohmann不太建议在获取数据时使用隐式转型，具体原因可以查看[这个 issue](https://github.com/nlohmann/json/issues/958)。所以你也可以使用下面的两种方式之一：
+本质上，`nlohmann::json::operator[]`的返回类型仍为`json`类型，并发生了隐式转型（`operator<<`无转型，因为库已经提供了重载）；不过nlohmann不太建议在获取数据时使用隐式转型，具体原因可以查看[这个 issue](https://github.com/nlohmann/json/issues/958)。所以你也可以使用下面的两种方式之一：
 
 ```c++
 auto val = data["Never"].get<int>();
@@ -198,7 +196,7 @@ std::ofstream outFile{ "out.json" };
 outFile << data; // 输出格式为json。
 ```
 
-当然，你可以用`data.is_null()`、`is_boolean()`、`is_number()`、`is_object()`、`is_array()`、`is_string()`来直接检查字段的类型，这对于检查文献合集是否合法非常重要。
+当然，你可以用如`data["Never"].is_null()`、`is_boolean()`、`is_number()`、`is_object()`、`is_array()`、`is_string()`来直接检查字段的类型，`data.contains("Never")`来检查字段是否存在，这对于检查文献合集是否合法非常重要。
 
 ### <span id="HTTP">Web API</span>
 
@@ -212,15 +210,18 @@ outFile << data; // 输出格式为json。
 #include <cpp-httplib/httplib.h>
 
 httplib::Client client{ "http://IP地址或者域名" }; // 与该IP地址进行连接，并使用HTTP协议。
+// 在我们的utils.hpp直接定义了API_ENDPOINT，可以直接client{ API_ENDPOINT }.
 ```
 
 > 特别地，为了减少库依赖，我们这里使用的不是 `https:`；`https:` 会对数据进行加解密，是安全的（这个 `s` 就是 safe 的意思）。除了我们提供的域名，如果一个网页使用 `http://`，那么就要十分小心了，因为所有的信息都会明文传输。如果你在校内，那么我们的域名在将信息中转到校外之前会帮你把服务转为 `https`，此时信息仅在校园网内部进行明文传输。
 
-HTTP 内规定了客户端对服务器的几种操作，最重要的两种就是 `GET` 和 `POST`，它们没有特别本质的区别，但是约定俗成地，前者在 URL 中携带参数（例如百度搜索东西就是 `baidu.com/s?wd=关键字`，这里 `?` 后面就是参数），并表示一些读取操作；后者在报文内携带参数，从而不会在网址本身中保存状态。我们统一使用 `GET` 方法即可，如下：
+HTTP 内规定了客户端对服务器的几种操作，最重要的两种就是 `GET` 和 `POST`，它们没有特别本质的区别，但是约定俗成地，前者在 URL 中携带参数（例如百度搜索东西就是 `baidu.com/s?wd=关键字`，这里 `?` 后面就是参数），并表示一些读取操作；后者在报文内携带参数，从而不会在网址本身中保存状态。
+
+我们在 `http://docman.lcpu.dev` 提供了 API 查询接口，方便大家查询信息。我们统一使用 `GET` 方法即可，如下：
 
 ```c++
 auto isbn_response = client.Get("/isbn/" + encodeUriComponent(isbn));
-auto title_response = client.Get("/title/" + + encodeUriComponent(url));
+auto title_response = client.Get("/title/" + encodeUriComponent(url));
 ```
 
 这里 `encodeUriComponent` 就是将一个字符串编码成有效的URL字段。例如，URL 中不能包括空格，如果确实需要空格，就需要转义为 `%20` 再发送。
@@ -228,17 +229,17 @@ auto title_response = client.Get("/title/" + + encodeUriComponent(url));
 在 HTTP 报文中，除了服务器的实际数据，还会包括一些描述其他属性的字段。一个重要的字段就是**状态码**（status code），表示向服务器的请求状态。当状态码为 `200` 时，就说明服务器处理正确：
 
 ```c++
-if (result->status == httplib::OK_200) {
-	// 处理正确数据result->body
+if (result && result->status == httplib::OK_200) {
+    // 处理正确数据result->body
 } else {
-	auto err = res.error();
+    auto err = res.error();
     std::cerr << "HTTP error: " << httplib::to_string(err) << std::endl;
 }
 ```
 
 > 另一种常见的状态码是 `404`，即未找到相关资源。
 
-事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 json 的字符串即可。
+事实上返回的数据一般是 HTML 等格式来供浏览器进行解析，但为了同学们的编码方便，我们将返回的报文格式转为了 json 格式。大家将 `result->body` 视作一个内部为 JSON 的字符串即可，详细文档参见 [Web API 文档](./api)。
 
 ### <span id="git">Git</span>
 
@@ -251,7 +252,7 @@ git config --global user.name "your_username" # 你在github上的用户名
 git config --global user.email your_email@domain.com # 你在github上注册使用的邮箱
 ```
 
-特别地，Github的国内直连不稳定，因此我们提供了git代理（只在git命令上有效，在浏览器上访问github并不会走这个代理），可以使用如下命令：
+特别地，Github 的国内直连不稳定，因此我们提供了 git 代理（只在 git 命令上有效，在浏览器上访问github并不会走这个代理），可以使用如下命令：
 
 ```bash
 git config --global http.proxy http://git.lcpu.dev:7890
@@ -265,7 +266,7 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-如果你已经可以稳定连接github，那么也可以不使用我们提供的代理。我们的代理仅限于校内用户，如果你在校外，可以使用北大VPN来访问校内资源。
+如果你已经可以稳定连接 github，那么也可以不使用我们提供的代理。我们的代理仅限于校内用户，如果你在校外，可以使用北大VPN来访问校内资源。
 
 ## 开始
 
@@ -275,17 +276,17 @@ git config --global --unset https.proxy
 
    ![](assets/git-template.png)
 
-2. 在如下界面中的"Repository name"输入仓库名（例如`docman`），**并别忘了在下方把仓库设置为private**。随后点击"Create repository"后即可创建自己的仓库。
+2. 在如下界面中的"Repository name"输入仓库名（例如`docman`），**并别忘了在下方把仓库设置为 private**。随后点击 "Create repository" 后即可创建自己的仓库。
 
    ![](assets/git-repo.png)
 
-3. 随后，你可以在命令行使用`git clone https://github.com/用户名/仓库名.git`来克隆代码仓库到本地。对于后续的操作，除了使用命令行的方式，你还可以利用 IDE 内部集成的 git 工具或者 [GitHub Desktop](https://desktop.github.com/)来 进行图形化的操作。例如在 VS Code 中：
+3. 随后，你可以在命令行使用 `git clone https://github.com/用户名/仓库名.git` 来克隆代码仓库到本地。对于后续的操作，除了使用命令行的方式，你还可以利用 IDE 内部集成的 git 工具或者 [GitHub Desktop](https://desktop.github.com/) 来进行图形化的操作。例如在 VS Code 中：
 
    ![git-vscode.png](assets/git-vscode.png)
 
    在 `message` 处输入一次提交的简介，然后点击 `commit` 就可以进行提交；随后点击 `push`，就会将代码同步到远端的仓库，在浏览器就可以直接看见。不过，大家以后总是要面临一些图形化界面操作不方便的情况，还是需要会使用命令行操作的。
 
-> 我们在将来还会有github的自动测试，大家push上去代码就会自动测试。
+> 我们稍后还会上线基于 GitHub 的自动测试，大家把代码推送上去就会自动测试。
 
 ### 如何提交
 

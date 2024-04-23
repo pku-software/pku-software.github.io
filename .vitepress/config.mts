@@ -45,7 +45,11 @@ export default defineConfig({
                 link: '/24spring/middle_homework/document'
               },
               {
-                text: 'Git基础',
+                text: 'Web API 文档',
+                link: '/24spring/middle_homework/api'
+              },
+              {
+                text: 'Git 基础',
                 link: '/24spring/middle_homework/git'
               }
             ]  
