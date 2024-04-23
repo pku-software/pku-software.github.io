@@ -2,11 +2,11 @@
 
 ### 变量定义中`*`和`&`的含义？
 
-**Q:** `int *a1, a2;`中只有`a1`被定义为了`int*`，请问对于`int &a, b;`有没有相同的性质？对于下面的例子，用`intpoint`为何不会有类似问题？
+**Q:** `int *a1, a2;`中只有`a1`被定义为了`int*`，请问对于`int &a, b;`有没有相同的性质？对于下面的例子，用`intPtr`为何不会有类似问题？
 
 ```c++
-using intpoint = int*;
-intpoint p, q;
+using intPtr = int*;
+intPtr p, q;
 ```
 
 **A:** 第一个问题的回答是：**是**，C++ 的引用声明符具有和 C 的指针声明符类似的语法。即 `int &a{b}, c{d};` 中，`c` 不是 `d` 的引用，而是从 `d` 初始化的 `int` 类型变量。
@@ -15,11 +15,11 @@ intpoint p, q;
 > 
 >> P.S. 不存在“引用的引用”类型，`int &r{...}, &&r2{...};` 中的 `&&` 是另一个语法“右值引用”。
 
-对于第二个问题，`using intpoint = int*;` 所表达的含义是将 `intpoint` 作为 `int*` 类型的别名。**这并非文本替换的过程**。除了你说的 `intpoint p, q;` 将 `p` 和 `q` 都声明为 `intpoint` 类型，以下的例子也可供研究：
+对于第二个问题，`using intPtr = int*;` 所表达的含义是将 `intPtr` 作为 `int*` 类型的别名。**这并非文本替换的过程**。除了你说的 `intPtr p, q;` 将 `p` 和 `q` 都声明为 `intPtr` 类型，以下的例子也可供研究：
 
 ```cpp
-using intpoint = int*;
-const intpoint ptr{}; // ptr 是 int* const 类型，为什么？
+using intPtr = int*;
+const intPtr ptr{}; // ptr 是 int* const 类型，为什么？
 
 using constInt = const int;
 constInt* ptr2{};       // 它的类型又是什么？
