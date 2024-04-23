@@ -14,8 +14,7 @@ export default defineConfig({
       },
       {
         text: '大作业文档',
-        // link: 'https://pku-software.github.io/project-doc/'
-        link: ''
+        link: 'https://pku-software.github.io/project-doc/'
       }
     ],
 
@@ -73,8 +72,7 @@ export default defineConfig({
       },
       {
         text: '大作业文档',
-        // link: 'https://pku-software.github.io/project-doc/'
-        link: ''
+        link: 'https://pku-software.github.io/project-doc/'
       },
       {
         text: '谷雨同学的 C++ 教程',
