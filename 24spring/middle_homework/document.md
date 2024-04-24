@@ -53,7 +53,9 @@
       "title": "A Fast File System for UNIX",
       "author": "Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry",
       "journal": "ACM Transactions on Computer Systems",
-      "year": "1984"
+      "year": "1984",
+      "volume": 2,
+      "issue": 3
     }
   ]
 }
@@ -73,7 +75,7 @@ The book [1] is a great book. The article [3] is also a classic. View [2] for mo
 References:
 [1] book: Randal E. Bryant, David R. O'Hallaron, Computer Systems: A Programmer's Perspective, Pearson, 2019
 [2] webpage: PyTorch. Available at https://pytorch.org
-[3] article: Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry, A Fast File System for UNIX, ACM Transactions on Computer Systems, 1984
+[3] article: Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry, A Fast File System for UNIX, ACM Transactions on Computer Systems, 1984, 2, 3
 ```
 
 ### 详细要求
