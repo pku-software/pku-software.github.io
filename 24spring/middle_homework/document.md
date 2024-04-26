@@ -53,7 +53,7 @@
       "title": "A Fast File System for UNIX",
       "author": "Marshall Kirk McKusick, William N. Joy, Samuel J. Leffler, Robert S. Fabry",
       "journal": "ACM Transactions on Computer Systems",
-      "year": "1984",
+      "year": 1984,
       "volume": 2,
       "issue": 3
     }
