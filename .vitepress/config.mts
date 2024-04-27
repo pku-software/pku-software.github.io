@@ -51,6 +51,10 @@ export default defineConfig({
               {
                 text: 'Git 基础',
                 link: '/24spring/middle_homework/git'
+              },
+              {
+                text: '常见问题',
+                link: '/24spring/middle_homework/faq'
               }
             ]  
           },
