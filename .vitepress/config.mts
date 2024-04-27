@@ -71,7 +71,6 @@ export default defineConfig({
               // },
             ]
           },
-          { text: 'FAQ', link: '/24spring/faq' }
         ]
       },
       {
