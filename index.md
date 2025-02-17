@@ -6,6 +6,9 @@ hero:
   name: "软件设计实践"
   text: "北大软设课程文档"
   tagline: "从程序到软件"
+  image: 
+    src: ./icon.png
+    alt: SoftwareDesign
   actions:
     - theme: brand
       text: 25春课程文档
