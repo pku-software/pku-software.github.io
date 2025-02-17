@@ -12,18 +12,18 @@ export default defineConfig({
         text: '主页',
         link: '/'
       },
-      {
-        text: '大作业文档',
-        link: 'https://pku-software.github.io/project-doc/'
-      }
+      // {
+      //   text: '大作业文档',
+      //   link: 'https://pku-software.github.io/project-doc/'
+      // }
     ],
 
     sidebar: [
       {
-        text: '24春课程文档',
-        link: '/24spring/',
+        text: '25春课程文档',
+        link: '/25spring/',
         items: [
-          { text: '课程通知', link: '/24spring/notices' },
+          { text: '课程通知', link: '/25spring/notices' },
           {
             text: '在提问之前',
             items: [
@@ -42,29 +42,29 @@ export default defineConfig({
             items: [
               {
                 text: '中作业文档',
-                link: '/24spring/middle_homework/document'
+                // link: '/24spring/middle_homework/document'
               },
-              {
-                text: 'Web API 文档',
-                link: '/24spring/middle_homework/api'
-              },
-              {
-                text: 'Git 基础',
-                link: '/24spring/middle_homework/git'
-              },
-              {
-                text: '常见问题',
-                link: '/24spring/middle_homework/faq'
-              }
+              // {
+              //   text: 'Web API 文档',
+              //   link: '/24spring/middle_homework/api'
+              // },
+              // {
+              //   text: 'Git 基础',
+              //   link: '/24spring/middle_homework/git'
+              // },
+              // {
+              //   text: '常见问题',
+              //   link: '/24spring/middle_homework/faq'
+              // }
             ]  
           },
           {
             text: "知识相关问题",
             items: [
-              {
-                text: '从 C 到 C++',
-                link: '/24spring/knowledge_related/from_c_to_cpp'
-              },
+              // {
+              //   text: '从 C 到 C++',
+              //   link: '/24spring/knowledge_related/from_c_to_cpp'
+              // },
               // {
               //   text: '类与对象初步',
               //   link: '/24spring/knowledge_related/class_and_object_intro'
@@ -79,7 +79,7 @@ export default defineConfig({
       },
       {
         text: '大作业文档',
-        link: 'https://pku-software.github.io/project-doc/'
+        // link: 'https://pku-software.github.io/project-doc/'
       },
       {
         text: '谷雨同学的 C++ 教程',
