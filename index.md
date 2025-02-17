@@ -7,7 +7,7 @@ hero:
   text: "北大软设课程文档"
   tagline: "从程序到软件"
   image: 
-    src: ./icon.png
+    src: /icon.png
     alt: SoftwareDesign
   actions:
     - theme: brand
