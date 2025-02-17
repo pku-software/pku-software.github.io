@@ -29,7 +29,7 @@ export default defineConfig({
             items: [
               {
                 text: '如何找到问题的答案',
-                link: '/24spring/before_ask/how_to_find_answers'
+                link: '/25spring/before_ask/how_to_find_answers'
               },
               // {
               //   text: '写大作业时遇到了问题',
