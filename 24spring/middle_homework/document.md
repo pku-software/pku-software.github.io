@@ -290,7 +290,7 @@ git config --global --unset https.proxy
 
 > 我们稍后还会上线基于 GitHub 的自动测试，大家把代码推送上去就会自动测试。
 
-### 如何提交
+### <span id="commit">如何提交</span>
 
 1. 首先，请生成一个访问你远程仓库的用户令牌。前往个人的 [新建用户令牌的设置页](https://github.com/settings/personal-access-tokens/new)，生成一个用户令牌。
 
