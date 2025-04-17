@@ -216,6 +216,11 @@ httplib::Client client{ "http://<IP 地址或者域名>" }; // 与该 IP 地址�
 // 在我们的utils.hpp直接定义了 APIEndpoint 单例类型，可以直接client{ APIEndpoint::get() }.
 ```
 
+> Q: `APIEndpoint` 单例（Singleton）类型是什么？
+>
+> A: 这个类型实现的功能非常简单，就是在第一次调用 `APIEndpoint::get()` 的时候检查系统的环境变量 `DOCMAN_API_ENDPOINT` 是否存在，如果存在就返回这个值，否则返回一个默认的地址。
+> 作用是在本地测试的时候可以以 `DOCMAN_API_ENDPOINT=http://docman-inner.zhuof.wang ./docman OPTIONS input_file` 的方式来使用内网的 API 地址（延迟低得多），来节约生命。
+
 > 特别地，为了减少库依赖，我们这里使用的不是 `https:`；`https:` 会对数据进行加解密，是安全的（这个 `s` 就是 safe 的意思）。除了我们提供的域名，如果一个网页使用 `http://`，那么就要十分小心了，因为所有的信息都会明文传输。因为这个作业使用的 API 不会涉及到敏感信息，所以你无须担忧这个作业中使用 `http://` 的安全性。
 <!-- 如果你在校内，那么我们的域名在将信息中转到校外之前会帮你把服务转为 `https`，此时信息仅在校园网内部进行明文传输。 -->
 
