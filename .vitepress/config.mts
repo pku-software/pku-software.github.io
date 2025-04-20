@@ -42,20 +42,20 @@ export default defineConfig({
             items: [
               {
                 text: '中作业文档',
-                // link: '/24spring/middle_homework/document'
+                link: '/25spring/middle_homework/document'
               },
-              // {
-              //   text: 'Web API 文档',
-              //   link: '/24spring/middle_homework/api'
-              // },
-              // {
-              //   text: 'Git 基础',
-              //   link: '/24spring/middle_homework/git'
-              // },
-              // {
-              //   text: '常见问题',
-              //   link: '/24spring/middle_homework/faq'
-              // }
+              {
+                text: 'Web API 文档',
+                link: '/25spring/middle_homework/api'
+              },
+              {
+                text: 'Git 基础',
+                link: '/25spring/middle_homework/git'
+              },
+              {
+                text: '常见问题',
+                link: '/25spring/middle_homework/faq'
+              }
             ]  
           },
           {
