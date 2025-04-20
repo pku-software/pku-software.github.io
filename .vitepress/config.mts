@@ -12,10 +12,10 @@ export default defineConfig({
         text: '主页',
         link: '/'
       },
-      // {
-      //   text: '大作业文档',
-      //   link: 'https://pku-software.github.io/project-doc/'
-      // }
+      {
+        text: '大作业文档',
+        link: 'https://pku-software.github.io/project-doc/'
+      }
     ],
 
     sidebar: [
@@ -31,10 +31,10 @@ export default defineConfig({
                 text: '如何找到问题的答案',
                 link: '/25spring/before_ask/how_to_find_answers'
               },
-              // {
-              //   text: '写大作业时遇到了问题',
-              //   link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
-              // }
+              {
+                text: '写大作业时遇到了问题',
+                link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
+              }
             ]
           },
           { text: '环境配置', link: 'https://pku-software.github.io/CppEnvSetup/' },
@@ -79,7 +79,7 @@ export default defineConfig({
       },
       {
         text: '大作业文档',
-        // link: 'https://pku-software.github.io/project-doc/'
+        link: 'https://pku-software.github.io/project-doc/'
       },
       {
         text: '谷雨同学的 C++ 教程',
