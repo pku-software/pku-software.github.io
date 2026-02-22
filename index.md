@@ -11,11 +11,11 @@ hero:
     alt: SoftwareDesign
   actions:
     - theme: brand
-      text: 25春课程文档
-      link: /25spring/notices
+      text: 26春课程文档
+      link: /26spring/notices
     - theme: alt
       text: 大作业文档
-      link: https://pku-software.github.io/project-doc
+      # link: https://pku-software.github.io/project-doc
 features_title: 在本课程中，你将会学习到：
 features:
 - icon: 📗
