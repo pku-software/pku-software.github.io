@@ -20,67 +20,67 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '25春课程文档',
-        link: '/25spring/',
+        text: '26春课程文档',
+        link: '/26spring/',
         items: [
-          { text: '课程通知', link: '/25spring/notices' },
+          { text: '课程通知', link: '/26spring/notices' },
           {
             text: '在提问之前',
             items: [
               {
                 text: '如何找到问题的答案',
-                link: '/25spring/before_ask/how_to_find_answers'
+                link: '/26spring/before_ask/how_to_find_answers'
               },
-              {
-                text: '写大作业时遇到了问题',
-                link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
-              }
+              // {
+              //   text: '写大作业时遇到了问题',
+              //   link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
+              // }
             ]
           },
           { text: '环境配置', link: 'https://pku-software.github.io/CppEnvSetup/' },
-          { text: '中作业', 
-            items: [
-              {
-                text: '中作业文档',
-                link: '/25spring/middle_homework/document'
-              },
-              {
-                text: 'Web API 文档',
-                link: '/25spring/middle_homework/api'
-              },
-              {
-                text: 'Git 基础',
-                link: '/25spring/middle_homework/git'
-              },
-              {
-                text: '常见问题',
-                link: '/25spring/middle_homework/faq'
-              }
-            ]  
-          },
-          {
-            text: "知识相关问题",
-            items: [
-              // {
-              //   text: '从 C 到 C++',
-              //   link: '/24spring/knowledge_related/from_c_to_cpp'
-              // },
-              // {
-              //   text: '类与对象初步',
-              //   link: '/24spring/knowledge_related/class_and_object_intro'
-              // },
-            ]
-          },
+          // { text: '中作业', 
+          //   items: [
+          //     {
+          //       text: '中作业文档',
+          //       link: '/25spring/middle_homework/document'
+          //     },
+          //     {
+          //       text: 'Web API 文档',
+          //       link: '/25spring/middle_homework/api'
+          //     },
+          //     {
+          //       text: 'Git 基础',
+          //       link: '/25spring/middle_homework/git'
+          //     },
+          //     {
+          //       text: '常见问题',
+          //       link: '/25spring/middle_homework/faq'
+          //     }
+          //   ]  
+          // },
+          // {
+          //   text: "知识相关问题",
+          //   items: [
+          //     {
+          //       text: '从 C 到 C++',
+          //       link: '/24spring/knowledge_related/from_c_to_cpp'
+          //     },
+          //     {
+          //       text: '类与对象初步',
+          //       link: '/24spring/knowledge_related/class_and_object_intro'
+          //     },
+          //   ]
+          // },
         ]
       },
       {
         text: '上机作业参考答案',
         link: 'https://pku-software.github.io/homework-answer/'
       },
-      {
-        text: '大作业文档',
-        link: 'https://pku-software.github.io/project-doc/'
-      },
+      // {
+      //   text: '大作业文档',
+      //   link: 'https://pku-software.github.io/project-doc/'
+      // },
       {
         text: '谷雨同学的 C++ 教程',
         link: 'https://learn-cpp.guyutongxue.site/'
