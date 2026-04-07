@@ -15,6 +15,7 @@ export default defineConfig({
       {
         text: '大作业文档',
         // link: 'https://pku-software.github.io/project-doc/'
+        link: ''
       }
     ],
 
