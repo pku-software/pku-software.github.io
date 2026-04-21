@@ -14,8 +14,7 @@ export default defineConfig({
       },
       {
         text: '大作业文档',
-        // link: 'https://pku-software.github.io/project-doc/'
-        link: ''
+        link: 'https://pku-software.github.io/project-doc/'
       }
     ],
 
@@ -32,33 +31,33 @@ export default defineConfig({
                 text: '如何找到问题的答案',
                 link: '/26spring/before_ask/how_to_find_answers'
               },
-              // {
-              //   text: '写大作业时遇到了问题',
-              //   link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
-              // }
+              {
+                text: '写大作业时遇到了问题',
+                link: 'https://pku-software.github.io/project-doc/preface/facing-problem.html'
+              }
             ]
           },
           { text: '环境配置', link: 'https://pku-software.github.io/CppEnvSetup/' },
-          // { text: '中作业', 
-          //   items: [
-          //     {
-          //       text: '中作业文档',
-          //       link: '/25spring/middle_homework/document'
-          //     },
-          //     {
-          //       text: 'Web API 文档',
-          //       link: '/25spring/middle_homework/api'
-          //     },
-          //     {
-          //       text: 'Git 基础',
-          //       link: '/25spring/middle_homework/git'
-          //     },
-          //     {
-          //       text: '常见问题',
-          //       link: '/25spring/middle_homework/faq'
-          //     }
-          //   ]  
-          // },
+          { text: '中作业', 
+            items: [
+              {
+                text: '中作业文档',
+                link: '/26spring/middle_homework/document'
+              },
+              {
+                text: 'Web API 文档',
+                link: '/26spring/middle_homework/api'
+              },
+              {
+                text: 'Git 基础',
+                link: '/26spring/middle_homework/git'
+              },
+              {
+                text: '常见问题',
+                link: '/26spring/middle_homework/faq'
+              }
+            ]  
+          },
           // {
           //   text: "知识相关问题",
           //   items: [
@@ -78,10 +77,10 @@ export default defineConfig({
         text: '上机作业参考答案',
         link: 'https://pku-software.github.io/homework-answer/'
       },
-      // {
-      //   text: '大作业文档',
-      //   link: 'https://pku-software.github.io/project-doc/'
-      // },
+      {
+        text: '大作业文档',
+        link: 'https://pku-software.github.io/project-doc/'
+      },
       {
         text: '谷雨同学的 C++ 教程',
         link: 'https://learn-cpp.guyutongxue.site/'
