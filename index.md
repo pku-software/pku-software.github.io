@@ -15,7 +15,7 @@ hero:
       link: /26spring/notices
     - theme: alt
       text: 大作业文档
-      # link: https://pku-software.github.io/project-doc
+      link: https://pku-software.github.io/project-doc
 features_title: 在本课程中，你将会学习到：
 features:
 - icon: 📗
